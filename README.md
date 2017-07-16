@@ -38,4 +38,105 @@ java -jar target/blackjack-0.0.1-RELEASE.jar
 * [Blackjack](https://en.wikipedia.org/wiki/Blackjack)
 * [Blackjack Rules](https://www.blackjackinfo.com/blackjack-rules/)
 
+## How to play Blackjack?
+```scala
+D:\workspace\blackjack>java -jar target/blackjack-0.0.1-RELEASE.jar
+
+You have $1000.00 left.
+How much do you want to bet?: 500
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 4 of Diamonds
+
+Your hand:
+3 of Diamonds + King of Spades
+Your hand is worth 13
+Do you want to hit or stand? (hit/stand): hit
+
+Dealer has decided to hit.
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 4 of Diamonds + King of Spades
+
+Your hand:
+3 of Diamonds + King of Spades + 6 of Diamonds
+Your hand is worth 19
+Do you want to hit or stand? (hit/stand): stand
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 4 of Diamonds + King of Spades + 7 of Diamonds + 2 of Clubs
+
+Your hand:
+3 of Diamonds + King of Spades + 6 of Diamonds
+Dealer is over 21. You Win!
+
+You have $1500.00 left. Do you want to keep playing? (yes or no): yes
+You have $1500.00 left.
+How much do you want to bet?: 1000
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 7 of Diamonds
+
+Your hand:
+2 of Hearts + 6 of Diamonds
+Your hand is worth 8
+Do you want to hit or stand? (hit/stand): hit
+
+Dealer has decided to hit.
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 7 of Diamonds + 5 of Diamonds
+
+Your hand:
+2 of Hearts + 6 of Diamonds + 8 of Clubs
+Dealer is over 21. You Win!
+
+You have $2500.00 left. Do you want to keep playing? (yes or no): yes
+You have $2500.00 left.
+How much do you want to bet?: 2500
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 4 of Clubs
+
+Your hand:
+3 of Hearts + 8 of Spades
+Your hand is worth 11
+Do you want to hit or stand? (hit/stand): hit
+
+Dealer has decided to hit.
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 4 of Clubs + 7 of Hearts
+
+Your hand:
+3 of Hearts + 8 of Spades + King of Spades
+Your hand is worth 21
+Do you want to hit or stand? (hit/stand): stand
+
+CURRENT GAME STATE
+------------------
+Dealer's hand:
+Face down card + 4 of Clubs + 7 of Hearts + 6 of Diamonds + Ace of Spades
+
+Your hand:
+3 of Hearts + 8 of Spades + King of Spades
+Dealer is over 21. You Win!
+
+You have $5000.00 left. Do you want to keep playing? (yes or no): no
+Your Record: [Rounds Played: 3  Win: 3  Lost: 0  Winning Percentage: 100.0%]
+```
 
