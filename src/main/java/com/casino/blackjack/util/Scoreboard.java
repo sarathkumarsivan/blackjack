@@ -10,12 +10,18 @@ package com.casino.blackjack.util;
 public class Scoreboard {
 
   /**
-   * Number of rounds that players and dealer play.
+   * Number of rounds that player and dealer play.
    */
   private int round;
 
+  /**
+   * Number of rounds that player win.
+   */
   private int win;
 
+  /**
+   * Number of rounds that player lose.
+   */
   private int lose;
 
   private Scoreboard() {};

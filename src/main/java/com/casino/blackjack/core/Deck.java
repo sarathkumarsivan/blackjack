@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * A deck has 52 cards total, without jokers. With jokers, it’s 54, but most serious card games have
- * you remove the two joker cards, leaving you with 52 cards. A single deck is being used in this
- * Blackjack game implementation.
+ * A deck has 52 cards in total, without jokers. With jokers, it’s 54, but most serious card games
+ * have you remove the two joker cards, leaving you with 52 cards. A single deck is being used in
+ * this Blackjack game implementation.
  * 
- * Within these 52 cards are four suits: hearts, clubs, diamonds, and spades. In a standard deck,
- * the heart suit is represented with a red heart, the club suit is represented with a black clover,
- * the diamond suit is represented with a red diamond shape, and the spade suit is represented with
- * a black, spiked leaf-like symbol.
+ * Within these 52 cards, there are four suits: hearts, clubs, diamonds, and spades. In a standard
+ * deck, the heart suit is represented with a red heart, the club suit is represented with a black
+ * clover, the diamond suit is represented with a red diamond shape, and the spade suit is
+ * represented with a black, spiked leaf-like symbol.
  * 
  */
 

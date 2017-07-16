@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/**
+ * A Player is an abstraction of players of Blackjack game.
+ *
+ */
 public abstract class Player {
 
   private boolean bust;
@@ -27,6 +31,14 @@ public abstract class Player {
     hand = new ArrayList<Card>();
   }
 
+  /**
+   * Accepts both cards to the player hand. i.e. the two cards are dealt into each player's hand If
+   * the player's hand has a value of 21 at this point, then the player wins. (This is called a
+   * "Blackjack".)
+   * 
+   * @param card1 the first card to be added to the player hand.
+   * @param card2 the second card to be added to the player hand.
+   */
   public void acceptHand(Card card1, Card card2) {
     hand.add(card1);
     hand.add(card2);
@@ -40,6 +52,7 @@ public abstract class Player {
 
   /**
    * Returns the hand value.
+   * 
    * @return
    */
   protected int checkHandValue() {
@@ -102,7 +115,7 @@ public abstract class Player {
 
     if (numOfAces != 0) {
       int aceIndex = numOfAces;
-      
+
       while (handValue > 21) {
         if (aceIndex == 0) {
           break;
@@ -121,8 +134,15 @@ public abstract class Player {
     return handValue;
   }
 
-
-  public void getBet(double playerMoney) {
+  /**
+   * Place a bet with the player money. In order to play blackjack and to be dealt into a round, a
+   * player needs to place a wager or a bet. In terms of payouts, a winning hand in blackjack will
+   * receive a 1:1 payout. This means that if a player bets $20 and they win the hand, they will
+   * receive $40 in payout. Player is not allowed to place a bet without enough money.
+   * 
+   * @param amount the player money to be used to place a wager or a bet.
+   */
+  public void placeBet(double amount) {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     boolean inputValid = false;
 
@@ -131,10 +151,10 @@ public abstract class Player {
         System.out.print("How much do you want to bet?: ");
         String input = reader.readLine();
 
-        if (Double.parseDouble(input) <= playerMoney) {
+        if (Double.parseDouble(input) <= amount) {
           bet = Double.parseDouble(input);
           inputValid = true;
-        } else if (Double.parseDouble(input) > playerMoney) {
+        } else if (Double.parseDouble(input) > amount) {
           throw new NumberFormatException();
         }
 

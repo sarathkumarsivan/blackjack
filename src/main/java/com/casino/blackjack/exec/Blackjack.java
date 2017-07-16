@@ -40,7 +40,7 @@ public class Blackjack {
         break;
       }
 
-      game.getPlayer().getBet(playerMoney);
+      game.getPlayer().placeBet(playerMoney);
       game.play();
 
       if (game.getWinner().equals("player")) {

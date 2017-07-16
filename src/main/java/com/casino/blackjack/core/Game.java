@@ -12,7 +12,7 @@ import com.casino.blackjack.util.Scoreboard;
  * dealer wins.
  *
  * Now, if the game has not ended, the user gets a chance to add some cards to her hand. In this
- * phase, the user sees her own cards and sees one of the dealer's two cards. (In a casino, the
+ * phase, the user sees her own cards and sees one of the dealer's two cards. (In a Casino, the
  * dealer deals himself one card face up and one card face down. All the user's cards are dealt face
  * up.) The user makes a decision whether to "Hit", which means to add another card to her hand, or
  * to "Stand", which means to stop taking cards.
@@ -30,10 +30,19 @@ import com.casino.blackjack.util.Scoreboard;
  */
 public class Game {
 
+  /**
+   * {@code deck} represents a standard deck of 52 cards.
+   */
   private Deck deck;
 
+  /**
+   * {@code player} the player who is playing this Blackjack game.
+   */
   private Player player;
 
+  /**
+   * {@code dealer} the dealer who is playing this Blackjack game.
+   */
   private Player dealer;
 
   /**
@@ -51,6 +60,10 @@ public class Game {
     dealer = new User(true);
   }
 
+  /**
+   * Play the Blackjack game where a player will compete against the house or the dealer. The cards
+   * in deck is shuffled on every six rounds.
+   */
   public void play() {
     if ((Scoreboard.getInstance().getRound() % 6 == 1)
         && (Scoreboard.getInstance().getRound() > 6)) {
@@ -59,45 +72,51 @@ public class Game {
     }
 
     dealCards();
-    displayGameState();
+    showScore();
 
     while (!(player.isStand() && dealer.isStand()) && !player.isBust() && !dealer.isBust()
         && !dealer.hasBlackJack() && !player.hasBlackJack()) {
+
       if (player.isStand() == false) {
         player.decide();
       }
+
       if (dealer.isStand() == false && !dealer.isBust()) {
+
         if (player.handValue >= 17) {
           hit(dealer);
         } else {
           dealer.decide();
         }
       }
+
       if (player.isStand() == false && !dealer.isBust()) {
         hit(player);
       }
+
       if (dealer.isStand() == false && !player.isBust()) {
         hit(dealer);
       }
+
       if (dealer.hasBlackJack() || (dealer.hasBlackJack() && player.hasBlackJack())) {
         break;
       }
+
       if (dealer.checkHandValue() > 21) {
         dealer.setBust(true);
       }
+
       if (player.checkHandValue() > 21) {
         player.setBust(true);
       }
+
       if (player.getHand().size() == 5 && player.checkHandValue() <= 21
           && dealer.checkHandValue() <= 21) {
-        displayGameState();
+        showScore();
         break;
       }
-
-      displayGameState();
-
+      showScore();
     }
-
     end();
   }
 
@@ -131,6 +150,11 @@ public class Game {
     player.acceptHand(deck.deck[card3], deck.deck[card4]);
   }
 
+  /**
+   * Pull cards from the deck until the player get a good card.
+   * 
+   * @param player the player who hit (pull cards from the deck).
+   */
   private void hit(Player player) {
     Random random = new Random();
     int card = random.nextInt(Deck.SIZE);
@@ -149,7 +173,11 @@ public class Game {
     }
   }
 
-  private void displayGameState() {
+  /**
+   * Show the current status of the game on each hit or stand. It shows the dealer's hand as well as
+   * player's hand and the hand value so that the players can decide whether to hit or stand.
+   */
+  private void showScore() {
     System.out.println("\nCURRENT GAME STATE");
     System.out.println("------------------");
 
@@ -177,6 +205,9 @@ public class Game {
 
   }
 
+  /**
+   * Decide and display the winner of current round and end the game
+   */
   private void end() {
     if (player.getHand().size() == 5 && player.isBust() == false) {
       System.out.println("You have gotten 5 cards without busting. You Win!");
@@ -203,23 +234,25 @@ public class Game {
       System.out.println("You have a higher score than Dealer. You Win!");
       winner = "player";
     }
-
   }
 
+  /**
+   * Returns the player of this game. It could be either dealer or player
+   * 
+   * @return the player of this game.
+   */
   public Player getPlayer() {
     return player;
   }
 
-  public void setPlayer(Player player) {
-    this.player = player;
-  }
-
+  /**
+   * Returns the winner of this game. It could be either dealer or player
+   * 
+   * @return the winner of this game.
+   */
   public String getWinner() {
     return winner;
   }
 
-  public void setWinner(String winner) {
-    this.winner = winner;
-  }
 
 }

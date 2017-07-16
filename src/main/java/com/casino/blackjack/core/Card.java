@@ -1,9 +1,9 @@
 package com.casino.blackjack.core;
 
 /**
- * A card represents one of the 52 cards in a standard deck of playing cards. Each card has a suit
- * and a value. When playing Blackjack the suits of the card do not matter. An Ace of clubs and a
- * Jack of clubs is the exact same (Blackjack) as an Ace of hearts and a 10 of spades.
+ * A card is one of the 52 cards in a standard deck of playing cards. Each card has a suit and a
+ * value. When playing Blackjack the suits of the card do not matter. An Ace of clubs and a Jack of
+ * clubs is the exact same (Blackjack) as an Ace of hearts and a 10 of spades.
  *
  */
 public class Card {
