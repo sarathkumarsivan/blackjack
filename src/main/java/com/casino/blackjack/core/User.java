@@ -35,7 +35,7 @@ public class User extends Player {
   }
 
   private void playerDecide(int value) {
-    System.out.println(String.format("Your hand is worth ", value));
+    System.out.println(String.format("Your hand is worth %d", value));
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     boolean inputValid = false;
