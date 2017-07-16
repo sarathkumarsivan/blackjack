@@ -33,13 +33,8 @@ The easiest way to start using Blackjack game is through running the jar blackja
 java -jar target/blackjack-0.0.1-RELEASE.jar
 ```
 
-## Reference
-
-* [Blackjack](https://en.wikipedia.org/wiki/Blackjack)
-* [Blackjack Rules](https://www.blackjackinfo.com/blackjack-rules/)
-
 ## How to play Blackjack?
-```scala
+```bash
 D:\workspace\blackjack>java -jar target/blackjack-0.0.1-RELEASE.jar
 
 You have $1000.00 left.
@@ -139,4 +134,9 @@ Dealer is over 21. You Win!
 You have $5000.00 left. Do you want to keep playing? (yes or no): no
 Your Record: [Rounds Played: 3  Win: 3  Lost: 0  Winning Percentage: 100.0%]
 ```
+
+## Reference
+
+* [Blackjack](https://en.wikipedia.org/wiki/Blackjack)
+* [Blackjack Rules](https://www.blackjackinfo.com/blackjack-rules/)
 
