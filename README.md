@@ -10,7 +10,7 @@ The player or players are dealt a two-card hand and add together the value of th
 
 The dealer must hit until the cards total 17 or more points. (At many tables the dealer also hits on a "soft" 17, i.e. a hand containing an ace and one or more other cards totaling six.) Players win by not busting and having a total higher than the dealer's. The dealer loses by busting or having a lesser hand than the player who has not busted. If the player and dealer have the same total, this is called a "push", and the player typically does not win or lose money on that hand. If all available players bust, the hand ends automatically without the dealer having to play his or her hand.
 
-This project is a command line implementation basic **Blackjack** game using Java programming language. This game is implemented with the following rules:
+This project is a command line implementation of basic **Blackjack** game using Java programming language. This game is implemented with the following rules:
 
 * Dealer must hit on soft 17.
 * Single Deck. The deck is shuffled every 6 rounds.
