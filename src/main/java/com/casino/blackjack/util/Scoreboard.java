@@ -24,6 +24,9 @@ public class Scoreboard {
    */
   private int lose;
 
+  /**
+   * Restrict instantiation of the class from other classes.
+   */
   private Scoreboard() {};
 
   private static class ScoreboardHolder {

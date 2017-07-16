@@ -41,7 +41,7 @@ public class Blackjack {
       }
 
       game.getPlayer().placeBet(playerMoney);
-      game.play();
+      game.playBlackjack();
 
       if (game.getWinner().equals("player")) {
         playerMoney += game.getPlayer().bet;

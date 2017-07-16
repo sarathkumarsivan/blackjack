@@ -64,7 +64,7 @@ public class Game {
    * Play the Blackjack game where a player will compete against the house or the dealer. The cards
    * in deck is shuffled on every six rounds.
    */
-  public void play() {
+  public void playBlackjack() {
     if ((Scoreboard.getInstance().getRound() % 6 == 1)
         && (Scoreboard.getInstance().getRound() > 6)) {
       System.out.println("Shuffling Cards...");
