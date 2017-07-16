@@ -21,17 +21,21 @@ This project is a command line implementation of basic **Blackjack** game using 
 
 Blackjack game is built using Apache Maven. To build Blackjack game, run:
 
+```javascript
 mvn clean compile assembly:single
+```
 
 ## Blackjack Command Line Interface
 
 The easiest way to start using Blackjack game is through running the jar blackjack-0.0.1-RELEASE.jar
 
+```javascript
 java -jar target/blackjack-0.0.1-RELEASE.jar
+```
 
 ## Reference
 
-[Blackjack](https://en.wikipedia.org/wiki/Blackjack)
-[Blackjack Rules](https://www.blackjackinfo.com/blackjack-rules/)
+* [Blackjack](https://en.wikipedia.org/wiki/Blackjack)
+* [Blackjack Rules](https://www.blackjackinfo.com/blackjack-rules/)
 
 
