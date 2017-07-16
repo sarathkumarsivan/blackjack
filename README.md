@@ -34,7 +34,7 @@ java -jar target/blackjack-0.0.1-RELEASE.jar
 ```
 
 ## How to play Blackjack?
-```bash
+```ruby
 D:\workspace\blackjack>java -jar target/blackjack-0.0.1-RELEASE.jar
 
 You have $1000.00 left.
