@@ -2,7 +2,8 @@ package com.casino.blackjack.core;
 
 /**
  * A card represents one of the 52 cards in a standard deck of playing cards. Each card has a suit
- * and a value.
+ * and a value. When playing Blackjack the suits of the card do not matter. An Ace of clubs and a
+ * Jack of clubs is the exact same (Blackjack) as an Ace of hearts and a 10 of spades.
  *
  */
 public class Card {
@@ -24,28 +25,30 @@ public class Card {
    * be between 0 and 3. If the parameters are outside these ranges, the constructed card object
    * will be invalid.
    * 
-   * @param suit
-   * @param num
+   * @param suit the value of suit to be used to construct the card.
+   * @param num the value of card number to be used to construct the card.
    */
   public Card(int suit, int num) {
     this.suit = suit;
     this.num = num;
   }
 
+  /**
+   * Returns the value of suit where this card belongs.
+   * 
+   * @return suit the value of suit where this card belongs.
+   */
   public int getSuit() {
     return suit;
   }
 
-  public void setSuit(int suit) {
-    this.suit = suit;
-  }
-
+  /**
+   * Returns the value of card number.
+   * 
+   * @return the value of card number.
+   */
   public int getNum() {
     return num;
-  }
-
-  public void setNum(int num) {
-    this.num = num;
   }
 
   /**

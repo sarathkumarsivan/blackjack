@@ -51,10 +51,20 @@ public class Deck {
     }
   }
 
+  /**
+   * Return this deck of cards. An array of 52 Cards, representing the deck.
+   * 
+   * @return this deck of cards.
+   */
   public Card[] getDeck() {
     return deck;
   }
 
+  /**
+   * Return status, represents how many cards have been dealt from the deck.
+   * 
+   * @return A array of 52 boolean values represents how many cards have been dealt from the deck.
+   */
   public boolean[] getStatus() {
     return status;
   }
