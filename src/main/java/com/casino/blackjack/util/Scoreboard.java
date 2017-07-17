@@ -63,18 +63,38 @@ public class Scoreboard {
     this.round = round;
   }
 
+  /**
+   * Return total win of the player
+   * 
+   * @return total win of the player
+   */
   public int getWin() {
     return win;
   }
 
+  /**
+   * Set total win of the player
+   * 
+   * @param win the total win of the player
+   */
   public void setWin(int win) {
     this.win = win;
   }
 
+  /**
+   * Return the total lose of the player
+   * 
+   * @return the total lose of the player
+   */
   public int getLose() {
     return lose;
   }
 
+  /**
+   * Set the total lose of the player
+   * 
+   * @param lose the total lose of the player
+   */
   public void setLose(int lose) {
     this.lose = lose;
   }

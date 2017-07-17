@@ -53,9 +53,9 @@ public class Blackjack {
       if (playerMoney > 0) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         DecimalFormat formatter = new DecimalFormat("#.00");
-        boolean inputValid = false;
+        boolean validInput = false;
 
-        while (inputValid == false) {
+        while (validInput == false) {
           try {
             System.out.print(
                 String.format("\nYou have $%s left. Do you want to keep playing? (yes or no): ",
@@ -66,10 +66,10 @@ public class Blackjack {
               throw new IOException();
             } else if (input.toLowerCase().equals("yes")) {
               gameOver = false;
-              inputValid = true;
+              validInput = true;
             } else if (input.toLowerCase().equals("no")) {
               gameOver = true;
-              inputValid = true;
+              validInput = true;
             }
           } catch (IOException ex) {
             System.out.print("Please try again. Type \"yes\" or \"no\".");
