@@ -11,22 +11,53 @@ import java.util.ArrayList;
  */
 public abstract class Player {
 
+  /**
+   * If the dealer or player goes over the point value of 21 it is called a bust and they will lose
+   * the hand. If the player and the dealer both bust the player will still lose the hand, which is
+   * the house advantage in the game of Blackjack.
+   */
   private boolean bust;
 
+  /**
+   * Hand of the player who plays Blackjack
+   */
   private ArrayList<Card> hand;
 
+  /**
+   * Hand value of the player.
+   */
   protected int handValue;
 
+  /**
+   * True if the hand of this player has a Blackjack and false otherwise.
+   */
   private boolean blackJack;
 
+  /**
+   * True if this player is a dealer and false otherwise.
+   */
   public boolean isDealer;
 
+  /**
+   * Name of the player. It could be dealer or player.
+   */
   public String name;
 
+  /**
+   * If player like the cards he has and want to play those cards he can stand, which means taking
+   * no more cards. To let the dealer know that he want to stand wave his hands across his area of
+   * the table and in a single deck game place his cards under the wager he made.
+   */
   private boolean stand = false;
 
+  /**
+   * Amount of player money to be used to place a wager or a bet.
+   */
   public double bet;
 
+  /**
+   * Construct a player. Player hand is initially empty.
+   */
   public Player() {
     hand = new ArrayList<Card>();
   }
