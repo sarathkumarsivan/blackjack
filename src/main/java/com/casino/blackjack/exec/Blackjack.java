@@ -17,15 +17,23 @@ import com.casino.blackjack.util.Scoreboard;
  */
 public class Blackjack {
 
+  /**
+   * The main method which calls the run method to start the Blackjack Game.
+   * 
+   * @param args command line arguments
+   */
   public static void main(String[] args) {
     Blackjack blackjack = new Blackjack();
     blackjack.run();
   }
 
+  /**
+   * Starts the game of Blackjack. The user has a stake of $1000, and makes a bet on each game.
+   */
   public void run() {
     Scoreboard scoreboard = Scoreboard.getInstance();
     boolean gameOver = false;
-    double playerMoney = 1000; // Amount of money the user has
+    double playerMoney = 1000; // $1000 -> the amount of money the user has
 
     while (gameOver == false) {
       Game game = new Game();

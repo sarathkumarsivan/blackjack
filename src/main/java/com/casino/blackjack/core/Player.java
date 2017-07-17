@@ -75,16 +75,25 @@ public abstract class Player {
     hand.add(card2);
   }
 
-  void acceptHit(Card card) {
+  /**
+   * Accept the card from deck.
+   * 
+   * @param card the card to be accepted by this player.
+   */
+  public void acceptHit(Card card) {
     hand.add(card);
   }
 
+  /**
+   * Makes a decision whether to "Hit", which means to add another card to the player's hand, or to
+   * "Stand", which means to stop taking cards.
+   */
   public abstract void decide();
 
   /**
    * Returns the hand value.
    * 
-   * @return
+   * @return the hand value of a player.
    */
   protected int checkHandValue() {
     int numOfAces = 0;
@@ -198,10 +207,20 @@ public abstract class Player {
     }
   }
 
+  /**
+   * Return true if the dealer or player goes over the point value of 21.
+   * 
+   * @return true if the dealer or player goes over the point value of 21.
+   */
   public boolean isBust() {
     return bust;
   }
 
+  /**
+   * Set the value of bust to the player instance.
+   * 
+   * @param bust the value to be used to set to this player instance.
+   */
   public void setBust(boolean bust) {
     this.bust = bust;
   }

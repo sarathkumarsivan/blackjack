@@ -120,6 +120,9 @@ public class Game {
     end();
   }
 
+  /**
+   * Two cards are dealt into each player's hand.
+   */
   private void dealCards() {
     Random random = new Random();
     int card1 = random.nextInt(Deck.SIZE);
@@ -253,6 +256,5 @@ public class Game {
   public String getWinner() {
     return winner;
   }
-
 
 }
